@@ -1,0 +1,92 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
+* {
+  color: #403f4c;
+  font-family: "Madimi One", sans-serif;
+}
+
+body {
+  font-family: "Madimi One", sans-serif; /* Keep 'Madimi One' */
+  font-family: Arial, Helvetica, sans-serif; /* Fallback for other browsers */
+  background-color: #f2f2f2;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  cursor: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f9df74;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: default; /* Reset cursor for the timer button */
+}
+
+#timer-icon {
+  font-size: 4rem;
+  text-shadow: 0 0 0 4px black;
+  transition: transform 0.4s ease-in-out;
+}
+
+.timer-text {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  max-width: 90%;
+}
+
+.title {
+  position: absolute; /* Position the title absolutely */
+  top: 20px;
+  left: 30px;
+}
+
+.title__main {
+  font-size: 2rem;
+}
+
+.title__sub {
+  font-size: 1.25rem;
+}
+
+.cursor__inner {
+  z-index: 999999;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.cursor__inner--dot {
+  width: 6px;
+  height: 6px;
+  background: #403f4c; /* Default cursor color */
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.cursor__inner--circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #403f4c; /* Default cursor color */
+  transition: border-color 0.3s ease; /* Add transition for smooth color change */
+}
